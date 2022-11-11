@@ -1,0 +1,80 @@
+! 2021-08-25 https://stackoverflow.com
+stackoverflow.com##.js-consent-banner.r16.l16.b16.bar-lg.fc-white.bg-black-750.sm\:p16.p32.sm\:w-auto.ws4.z-nav-fixed.ps-fixed.ff-sans
+stackoverflow.com##.ps-relative.js-freemium-cta
+stackoverflow.com##.tex2jax_ignore.module
+stackoverflow.com##.js-dismissable-hero.z-nav.b0.r0.l0.ps-fixed.bc-black-100.bt.bs-sm.bg-black-025
+
+! 2021-08-25 https://superuser.com
+superuser.com##.js-consent-banner.r16.l16.b16.bar-lg.fc-white.bg-black-750.sm\:p16.p32.sm\:w-auto.ws4.z-nav-fixed.ps-fixed.ff-sans
+superuser.com##.tex2jax_ignore.module
+superuser.com##.ps-relative.js-freemium-cta
+
+
+! 2/20/2019 https://ux.stackexchange.com
+ux.stackexchange.com###hot-network-questions
+
+! 2/20/2019 https://stackoverflow.com
+stackoverflow.com###hot-network-questions
+
+! 3/2/2019 https://superuser.com
+superuser.com###hot-network-questions
+
+! 3/6/2019 https://electronics.stackexchange.com
+electronics.stackexchange.com###hot-network-questions
+
+! 3/15/2019 https://english.stackexchange.com
+english.stackexchange.com###hot-network-questions
+
+! 3/18/2019 https://www.youtube.com
+www.youtube.com##ytd-watch-next-secondary-results-renderer
+
+! 3/21/2019 https://www.youtube.com -> blocks the front page of youtube, so I don't see the annoying "trending" and shorts videos. All other youtube stuff should work, so I use https://www.youtube.com/channel/UCggjj-cTvbo7OpA6EgwAX6g as my new "front page"
+||youtube.com^|$document
+
+! 3/25/2019 https://www.youtube.com
+www.youtube.com###comments
+
+||blick.ch
+||20minuten.ch
+||20min.ch
+||bbc.com
+||bbc.co.uk
+||independent.co.uk
+||newsnow.co.uk
+||telegraph.co.uk
+||express.co.uk
+||dailymail.co.uk
+||theguardian.com
+||huffpost.com
+||politico.com
+||thesun.co.uk
+||nbcnews.com
+||forbes.com
+||nytimes.com
+||theregister.co.uk
+||twitch.com
+||twitch.tv
+||cash.ch
+||spiegel.de
+||sueddeutsche.de
+||faz.net
+||bloomberg.com
+||reuters.com
+||liquipedia.net
+||liquipedia.com
+||twitter.com
+||cnbc.com
+
+! Means that qwant.com and news views are blocked, but lite.qwant.com is not blocked (for search)
+www.qwant.com
+
+! block keywords in youtube searches (needs both entries (xhr and document)
+!/.*youtube\.com/.*?(starcraft|lowko|lowkotv|esports|serral|valorant|shroud|orb).*/$document,domain=www.youtube.com
+!/.*youtube\.com/.*?(starcraft|lowko|lowkotv|esports|serral|valorant|shroud|orb).*/$xmlhttprequest,domain=www.youtube.com
+
+! Blocks all pages which don't contain *keyword* on the page. Note: doesn't always work for YouTube...
+!*##body > *:not(:has-text( Unreal Engine))
+
+! 2022-04-27 https://askubuntu.com
+askubuntu.com##.tex2jax_ignore.module
+
